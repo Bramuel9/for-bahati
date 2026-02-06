@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 400px;
+  }
+  
+  h1 {
+    color: #ff4d6d;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  .buttons {
+    margin-top: 25px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+  }
+  
+  #yesBtn {
+    background: #ff4d6d;
+    color: white;
+  }
+  
+  #yesBtn:hover {
+    transform: scale(1.1);
+  }
+  
+  #noBtn {
+    background: #ddd;
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff4d6d;
+    font-weight: bold;
+  }
+  
+  /* Floating hearts */
+  .hearts span {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 300px;
+    animation: pop 0.4s ease;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  
+  #closeModal {
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  @keyframes pop {
+    from {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+      padding: 25px 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    button {
+      width: 80%;
+      font-size: 18px;
+    }
+  
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #noBtn {
+      margin-top: 15px;
+    }
+  
+    .modal-content {
+      width: 90%;
+    }
+  }
+  
+  button {
+    touch-action: manipulation;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  .modal-content img {
+    max-height: 60vh;
+    object-fit: cover;
+  }
+      
+  
